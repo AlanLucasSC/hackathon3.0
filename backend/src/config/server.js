@@ -22,7 +22,6 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage })
 
-
 server.use(bodyParser.urlencoded({extended: true}))
 server.use(bodyParser.json())
 server.use(allowCors)
