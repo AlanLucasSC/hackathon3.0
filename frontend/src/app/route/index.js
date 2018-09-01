@@ -4,7 +4,8 @@ import { Login } from '../auth'
 import Processo from '../processo/processo'
 import Protocolo from '../protocolo/protocolo'
 import Dashboard from '../dashboard/dashboard'
-import CadastrarUsuario from '../cadastro/cadastrar_usuario'
+import CadastrarUsuario from '../cadastro/cadastrar'
+import CadastrarEstagio from '../estagio/estagio'
 
 export default class Routes extends React.Component{
     constructor(props){
@@ -20,6 +21,7 @@ export default class Routes extends React.Component{
                     <Route path="/protocolo" component={Protocolo} />
                     <Route path="/dashboard" component={Dashboard} />
                     <Route path="/cadastrarusuario" component={CadastrarUsuario} />
+                    <Route path="/cadastrarestagio" component={CadastrarEstagio} />
 
                 </Switch>
             </BrowserRouter>   
