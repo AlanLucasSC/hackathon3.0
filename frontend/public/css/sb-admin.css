@@ -373,3 +373,12 @@ body.sidebar-toggled footer.sticky-footer {
     width: calc(100% - 90px);
   }
 }
+
+#cadastroUsuario{
+  margin-top: 60px;
+}
+
+label{
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
