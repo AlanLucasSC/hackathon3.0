@@ -8,7 +8,7 @@ export class Login extends Component{
         super(props)
 
         getCategoria().then(
-            value => console.log(value)
+            value => console.log(value.data)
         )
     }
     render(){
