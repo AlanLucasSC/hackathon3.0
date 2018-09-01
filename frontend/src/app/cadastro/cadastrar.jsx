@@ -11,17 +11,10 @@ export default class Cadastrar extends Component {
     
     constructor(props){
         super(props)
-        this.state = {processo: '', protocolo: '', categoria: '', estagiario: '', instituicao: '', 
-        supervisor: '', email: '', password: '', nome: '', 
+        this.state = {email: '', password: '', nome: '', 
         cargo: '', rg: '', cpf: '', list: [] }
         
 
-        this.handleChangeProcesso = this.handleChangeProcesso.bind(this)
-        this.handleChangeProtocolo = this.handleChangeProtocolo.bind(this)
-        this.handleChangeCategoria = this.handleChangeCategoria.bind(this)
-        this.handleChangeEstagiario = this.handleChangeEstagiario.bind(this)
-        this.handleChangeInstituicao = this.handleChangeInstituicao.bind(this)
-        this.handleChangeSupervisor = this.handleChangeSupervisor.bind(this)
         this.handleChangeEmail = this.handleChangeEmail.bind(this)
         this.handleChangePassword = this.handleChangePassword.bind(this)
         this.handleChangeNome = this.handleChangeNome.bind(this)
@@ -35,24 +28,6 @@ export default class Cadastrar extends Component {
     }
 
   
-    handleChangeProcesso(e){
-        this.setState({...this.state, processo: e.target.value })
-    }
-    handleChangeProtocolo(e){
-        this.setState({...this.state, protocolo: e.target.value })
-    }
-    handleChangeCategoria(e){
-        this.setState({...this.state, categoria: e.target.value })
-    }
-    handleChangeEstagiario(e){
-        this.setState({...this.state, estagiario: e.target.value })
-    }
-    handleChangeInstituicao(e){
-        this.setState({...this.state, instituicao: e.target.value })
-    }
-    handleChangeSupervisor(e){
-        this.setState({...this.state, supervisor: e.target.value })
-    }
     handleChangeEmail(e){
         this.setState({...this.state, email: e.target.value })
     }
@@ -70,12 +45,6 @@ export default class Cadastrar extends Component {
     }
    
     handleAdd(){
-        const processo = this.state.processo//arrumar forma de passar mais parametros, no caso nome e tipo. Tipo é fixo entao é mais de boa. Quando deixei default na collection deu
-        const protocolo = this.state.protocolo
-        const categoria = this.state.categoria
-        const estagiario = this.state.estagiario
-        const instituicao = this.state.instituicao
-        const supervisor = this.state.supervisor
         const email = this.state.email
         const password = this.state.password
         const nome = this.state.nome
@@ -84,19 +53,16 @@ export default class Cadastrar extends Component {
         const cpf = this.state.cpf
         
 
-        axios.post(URL, {processo, protocolo, categoria, estagiario, instituicao, 
-        supervisor, email, password, nome, cargo, rg, cpf})
-            .then(resp => this.refresh(resp.data))
+        axios.post(URL, {email, password, nome, cargo, rg, cpf})
+            .then(resp => this.refresh())
        
             
     }
-    refresh(help){
+    refresh(){
         axios.get(`${URL}?sort=-createdAt`)
-            .then(resp => this.setState({...this.state, processo: '', protocolo: '', categoria: '', estagiario: '', instituicao: '', 
-            supervisor: '', email: '', password: '', nome: '', 
+            .then(resp => this.setState({...this.state, email: '', password: '', nome: '', 
             cargo: '', rg: '', cpf:'', list: resp.data})) 
-        this.state.id = help
-
+       
     }
    
    
@@ -104,13 +70,7 @@ export default class Cadastrar extends Component {
     render() {
         return (
             <div className='Cadastrar'> 
-                <Form processo={this.state.processo} 
-                    protocolo={this.state.protocolo}
-                    categoria={this.state.categoria}
-                    estagiario={this.state.estagiario}
-                    instituicao={this.state.instituicao}
-                    supervisor={this.state.supervisor}
-
+                <Form
                     email={this.state.email}
                     password={this.state.password}
                     nome={this.state.nome}
@@ -118,27 +78,14 @@ export default class Cadastrar extends Component {
                     rg={this.state.rg}
                     cpf={this.state.cpf}
 
-
-                    
-
-                   
-                    handleChangeProcesso={this.handleChangeProcesso}
-                    handleChangeProtocolo={this.handleChangeProtocolo}
-                    handleChangeCategoria={this.handleChangeCategoria}
-                    handleChangeEstagiario={this.handleChangeEstagiario}
-                    handleChangeInstituicao={this.handleChangeInstituicao}
-                    handleChangeSupervisor={this.handleChangeSupervisor}
-
                     handleChangeEmail={this.handleChangeEmail}
                     handleChangePassword={this.handleChangePassword}
                     handleChangeNome={this.handleChangeNome}
                     handleChangeCargo={this.handleChangeCargo}
                     handleChangeRg={this.handleChangeRg}
                     handleChangeCpf={this.handleChangeCpf}
-
-                    
                    
-                    />
+                />
              
            
             </div>
