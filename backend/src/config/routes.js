@@ -10,10 +10,14 @@ module.exports = function(server) {
     //User
     const user = require('../api/user/userService')
     user.register(router, '/user')
-    
+
     //Image
     const image = require('../api/image/imageService')
     image.register(router, '/image')
+
+    //Estagio
+    const estagio = require('../api/estagio/estagioService')
+    estagio.register(router, '/estagio')
 
     //Custom routes
     
