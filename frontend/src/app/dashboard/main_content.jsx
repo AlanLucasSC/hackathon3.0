@@ -3,10 +3,10 @@ import PageTitle from './page-title'
 import ClearFix from './clearfix_abaixo'
 
 export default props => (
-    <div class="right_col" role="main">
-        <div class="">
+    <div className="right_col" role="main">
+        <div className="">
             <PageTitle />
-            <div class="clearfix"></div>
+            <div className="clearfix"></div>
             <ClearFix />
         </div>
     </div>

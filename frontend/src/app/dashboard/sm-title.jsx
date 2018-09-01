@@ -2,11 +2,11 @@ import React from 'react'
 
 export default props => (
 
-    <div class="profile">
-            <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img"/>
+    <div className="profile">
+            <div className="profile_pic">
+                <img src="images/img.jpg" alt="..." className="img-circle profile_img"/>
             </div>
-            <div class="profile_info">
+            <div className="profile_info">
                 <span>Welcome,</span>
                 <h2>Anthony Mutisya</h2>
             </div>
