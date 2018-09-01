@@ -3,11 +3,10 @@ const passwordHash = require('password-hash')
 const uniqueValidator = require('mongoose-unique-validator');
 const mongoose = restful.mongoose
 
-
 const user = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    nome: { type: String },
+    nome: { type: String, required: true },
     cargo: { type: String },
     rg: { type: String },
 })
