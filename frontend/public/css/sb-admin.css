@@ -374,3 +374,11 @@ body.sidebar-toggled footer.sticky-footer {
   }
 }
 
+#cadastroUsuario{
+  margin-top: 60px;
+}
+
+label{
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
