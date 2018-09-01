@@ -6,10 +6,24 @@ export default props => (
         <li className="nav-item active">
           <a className="nav-link" href="index.html">
             <i className="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
+            <span> Painel</span>
           </a>
         </li>
-        <li className="nav-item dropdown">
+        <li className="nav-item">
+          <a className="nav-link" href="charts.html">
+            <i className="fas fa-fw fa-chart-area"></i>
+            <span> Adicionar Novo Estágio</span></a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="tables.html">
+            <i className="fas fa-fw fa-table"></i>
+            <span> Estágios</span></a>
+        </li>
+      </ul>
+
+)
+
+/* pages <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i className="fas fa-fw fa-folder"></i>
             <span>Pages</span>
@@ -24,17 +38,4 @@ export default props => (
             <a className="dropdown-item" href="404.html">404 Page</a>
             <a className="dropdown-item" href="blank.html">Blank Page</a>
           </div>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="charts.html">
-            <i className="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="tables.html">
-            <i className="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
-        </li>
-      </ul>
-
-)
+        </li> */

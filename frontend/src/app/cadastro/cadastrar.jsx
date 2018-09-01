@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import {  Link } from 'react-router'
-
+import Form from './cadastrar_usuario'
 const URL = 'http://localhost:4009/api/estagio/estagio'
 //talvez trocar estagio por user
 
-import Form from './cadastrar_usuario'
+
 
 export default class Cadastrar extends Component {
     
@@ -42,6 +42,9 @@ export default class Cadastrar extends Component {
     }
     handleChangeCpf(e){
         this.setState({...this.state, cpf: e.target.value })
+    }
+    handleChangeRg(e){
+        this.setState({...this.state, rg: e.target.value })
     }
    
     handleAdd(){

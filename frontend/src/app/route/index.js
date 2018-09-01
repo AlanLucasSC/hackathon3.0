@@ -6,6 +6,8 @@ import Protocolo from '../protocolo/protocolo'
 import Dashboard from '../dashboard/dashboard'
 import CadastrarUsuario from '../cadastro/cadastrar'
 import CadastrarEstagio from '../estagio/estagio'
+import LoginTela from '../login/login'
+
 
 export default class Routes extends React.Component{
     constructor(props){
@@ -16,15 +18,19 @@ export default class Routes extends React.Component{
         return (
             <BrowserRouter>
                 <Switch>
-                    <Route path="/" exact={true} component={Login} />
+                    
+                <Route path="/" exact={true} component={Login} />
                     <Route path="/processo" component={Processo} />
                     <Route path="/protocolo" component={Protocolo} />
                     <Route path="/dashboard" component={Dashboard} />
                     <Route path="/cadastrarusuario" component={CadastrarUsuario} />
                     <Route path="/cadastrarestagio" component={CadastrarEstagio} />
+                    
 
                 </Switch>
             </BrowserRouter>   
         )
     }
 }
+
+//

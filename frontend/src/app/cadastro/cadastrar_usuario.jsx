@@ -47,6 +47,7 @@ export default props => (
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-md">Cadastrar</button>
+                            <button type="cancel" class="btn btn-danger btn-md">Cancelar</button>
                         </form>
                 </div>
             </div>

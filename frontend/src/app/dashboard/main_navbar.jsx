@@ -12,7 +12,6 @@ export default props => (
         <i className="fas fa-bars"></i>
       </button>
 
-      <NavBarSearch />
       <NavBar />
 
     </nav>
