@@ -2,7 +2,17 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { getCategoria } from './action/effects'
+
 class App extends Component {
+
+  constructor(props){
+    super(props)
+    getCategoria().then(
+      value => console.log(value)
+    )
+  }
+
   render() {
     return (
       <div className="App">
