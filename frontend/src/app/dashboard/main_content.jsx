@@ -1,8 +1,9 @@
 import React from 'react'
 import SideBar from './sidebar'
-import BreadCrumbs from '../dashboard/sb_breadcrumbs'
+import BreadCrumbs from './breadcrumbs'
 import IconCards from './iconcards'
 import DataTables from './datatables'
+import Footer from './footer'
 
 
 export default props => (
@@ -14,7 +15,7 @@ export default props => (
                 <IconCards />
                 <DataTables />
             </div>
-            coloca sticky aqui
+            <Footer />
         </div>
     </div>
 )
