@@ -4,6 +4,7 @@ import { Login } from '../auth'
 import Processo from '../processo/processo'
 import Protocolo from '../protocolo/protocolo'
 import Dashboard from '../dashboard/dashboard'
+import LoginView from '../login/login'
 
 export default class Routes extends React.Component{
     constructor(props){
@@ -18,6 +19,7 @@ export default class Routes extends React.Component{
                     <Route path="/processo" component={Processo} />
                     <Route path="/protocolo" component={Protocolo} />
                     <Route path="/dashboard" component={Dashboard} />
+                    <Route path="/login" component={LoginView} />
 
                 </Switch>
             </BrowserRouter>   
