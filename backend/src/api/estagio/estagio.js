@@ -11,4 +11,4 @@ const estagio = new mongoose.Schema({
     validado: { type: String, required: true, default: 'TRUE', uppercase: true, enum: ['TRUE', 'FALSE'] },
 })
 
-module.exports = restful.model('Estagio', estagio)
+module.exports = restful.model('Estagio', estagio) 
