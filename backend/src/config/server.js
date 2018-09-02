@@ -11,6 +11,8 @@ const request = require("request");
 //Upload file
 const multer  = require('multer')
 
+const Documento = require('../api/documento/documento')
+
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'img/')
@@ -66,7 +68,12 @@ server.post('/file', upload.single('image'), function (req, res, next) {
       })
     };
 
-    console.log(body);
+    Doc = new Documento({
+      value: JSON.parse(body).key,
+      estagio: req.body.estagio,
+      user: req.body.user
+    })
+    Doc.save()
   })
 
 	/**
