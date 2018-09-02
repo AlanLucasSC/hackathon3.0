@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import {  Link } from 'react-router'
 import Form from './cadastrar_usuario'
-const URL = 'http://localhost:4009/api/estagio/estagio'
+const URL = 'http://localhost:4009/api/user'
 //talvez trocar estagio por user
 
 
@@ -21,6 +21,7 @@ export default class Cadastrar extends Component {
         this.handleChangeCargo = this.handleChangeCargo.bind(this)
         this.handleChangeRg = this.handleChangeRg.bind(this)
         this.handleChangeCpf = this.handleChangeCpf.bind(this)
+        this.handleAdd = this.handleAdd.bind(this)
         
 
         this.refresh()
@@ -80,6 +81,8 @@ export default class Cadastrar extends Component {
                     cargo={this.state.cargo}
                     rg={this.state.rg}
                     cpf={this.state.cpf}
+
+                    handleAdd={this.handleAdd}
 
                     handleChangeEmail={this.handleChangeEmail}
                     handleChangePassword={this.handleChangePassword}

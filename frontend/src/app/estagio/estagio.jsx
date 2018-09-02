@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import {  Link } from 'react-router'
 import Form from './form'
-const URL = 'http://localhost:4009/api/estagio/estagio'
+const URL = 'http://localhost:4009/api/estagio'
 //talvez trocar estagio por user
 
 
@@ -21,7 +21,7 @@ export default class Estagio extends Component {
         this.handleChangeInstituicao = this.handleChangeInstituicao.bind(this)
         this.handleChangeSupervisor = this.handleChangeSupervisor.bind(this)
        
-        
+        this.handleAdd = this.handleAdd.bind(this)
 
         this.refresh()
        
@@ -82,6 +82,8 @@ export default class Estagio extends Component {
                     estagiario={this.state.estagiario}
                     instituicao={this.state.instituicao}
                     supervisor={this.state.supervisor}
+
+                    handleAdd={this.handleAdd}
 
                 
 
