@@ -214,6 +214,7 @@ iframe {
   */
   padding-left: 120px;
   padding-right: 110px;
+  padding-bottom: 20px;
 }
 
 /*------------------------------------------------------------------
@@ -504,7 +505,8 @@ iframe {
 
 p{
   font-size: 12px;
-  padding-bottom: 10px;
+  padding-top:10px;
+  padding-bottom: 5px;
 }
 
 .fix3{
