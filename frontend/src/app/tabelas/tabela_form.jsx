@@ -8,8 +8,8 @@ export default props => {
         return list.map(post => (   
             <tr key={post._id}>
             <th>{post.nome}</th>
-            <th>Supervisor</th>
-            <th>Ação</th>
+            <th>{post.usuarioNome}</th>
+            <th><button type="submit" className="sucess" >Cadastrar </button></th>
              </tr>
         ))
     }
