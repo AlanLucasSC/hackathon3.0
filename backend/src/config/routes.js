@@ -19,6 +19,14 @@ module.exports = function(server) {
     const estagio = require('../api/estagio/estagioService')
     estagio.register(router, '/estagio')
 
+    //Documento
+    const documento = require('../api/documento/documentoService')
+    documento.register(router, '/documento')
+
+    //Instituicao
+    const instituicao = require('../api/instituicao/instituicaoService')
+    instituicao.register(router, '/instituicao')
+
     //Custom routes
     
     //Compare password
