@@ -9,7 +9,7 @@ export default props => {
             <tr key={post._id}>
             <th>{post.nome}</th>
             <th>{post.usuarioNome}</th>
-            <th><button type="submit" className="sucess" >Cadastrar </button></th>
+            <th><button type="submit" className="sucess" > Adicionar </button></th>
              </tr>
         ))
     }
