@@ -24,6 +24,16 @@ export default props => (
             <i className="fas fa-list-ul"></i>
             <span> Instituição </span></a>
         </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/listaestagiouser">
+            <i className="fas fa-list-ul"></i>
+            <span> Meus Estagios - User </span></a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/listardocumentos">
+            <i className="fas fa-list-ul"></i>
+            <span> Meus Documentos - User </span></a>
+        </li>
       </ul>
 
 )
