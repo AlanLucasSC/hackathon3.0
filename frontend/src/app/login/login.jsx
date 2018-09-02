@@ -80,10 +80,11 @@ export default class Login extends Component {
                             </div>
         
                             <div className="text-center p-t-136">
-                                <a className="txt2" href="/cadastrarusuario">
+                            <Link to="/cadastrarusuario">
+                                <a className="txt2" >
                                     Cadastre-se
                                     <i className="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-                                </a>
+                                </a></Link>
                             </div>
                            
                         </div>

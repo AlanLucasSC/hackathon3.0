@@ -1,5 +1,6 @@
 import React from 'react'
 import Ibagem from '../../../src/img/logo.jpg'
+import { Link } from 'react-router-dom'
 
 export default props => (
    
@@ -52,10 +53,11 @@ export default props => (
                         Cadastrar
                     </button>
        
-
-                <button type="cancel" className="btn btn-dark btn-md fix2">
+                <Link to="/">
+                <button type="cancel" className="btn btn-dark btn-md fix2" >
                         Cancelar
                     </button>
+                    </Link>
                 </div>
             </div>
         </div>
