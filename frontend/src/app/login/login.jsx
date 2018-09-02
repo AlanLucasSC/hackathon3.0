@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Ibagem from '../../../src/img/logo.jpg'
 
+
 export default class Login extends Component {
     constructor(props){
         super(props)
@@ -18,7 +19,7 @@ export default class Login extends Component {
                              <img src={Ibagem} />
                         </div>
         
-                        <form id="form_login" enctype="multipart/form-data" className="login100-form validate-form">
+                        <form id="form_login" encType="multipart/form-data" className="login100-form validate-form">
                             <span className="login100-form-title">
                                 Login
                             </span>
@@ -51,9 +52,11 @@ export default class Login extends Component {
                                     <i className="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                                 </a>
                             </div>
+                           
                         </form>
                     </div>
                 </div>
+               
             </div>
         )
     }
