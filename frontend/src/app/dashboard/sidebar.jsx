@@ -3,7 +3,7 @@ import React from 'react'
 export default props => (
 
     <ul className="sidebar navbar-nav">
-        <li className="nav-item active">
+        <li className="nav-item">
           <a className="nav-link" href="/dashboard">
             <i className="fas fa-fw fa-tachometer-alt"></i>
             <span> Painel</span>
