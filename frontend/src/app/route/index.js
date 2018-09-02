@@ -10,7 +10,6 @@ import LoginTela from '../login/login'
 import CadastrarInstituicao from'../instituicao/instituicao'
 import ListarDocumento from'../documentos/documentos'
 
-
 export default class Routes extends React.Component{
     constructor(props){
         super(props)

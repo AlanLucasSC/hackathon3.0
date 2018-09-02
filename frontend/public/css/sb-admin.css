@@ -255,9 +255,9 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
 
 .card-body{
   height: 200px;
-  font-size: 25px;
+  font-size: 15px;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 0px;
   padding-left: 40px;
 }
 

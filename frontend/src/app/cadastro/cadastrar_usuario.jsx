@@ -4,13 +4,13 @@ import Ibagem from '../../../src/img/logo.jpg'
 export default props => (
    
     <div className="limiter">
-    <div className="container-login101">
-        <div className="wrap-login101">
+    <div className="container-cadastro">
+        <div className="wrap-cadastro">
             <div className="login100-pic">
                  <img className="fix1" src={Ibagem} />
             </div>
 
-            <form id="form_login" encType="multipart/form-data" className="fix3 login100-form validate-form">
+            <form id="form_login" encType="multipart/form-data" className=" login100-form validate-form">
                 <span className="login100-form-title">
                     Cadastro<hr/>
                     <p className="text-muted">Todos os campos são obrigatórios!</p>
