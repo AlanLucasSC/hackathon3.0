@@ -5,12 +5,10 @@ import Table from '../tabelas/table'
 import BreadCrumbs from '../dashboard/breadcrumbs';
 
 export default props => (
-   
    <div>
      <Layout>
         <BreadCrumbs/>
-        <Table/>
+        <Table handleAdd={ props.handleAdd }/>
      </Layout> 
    </div>
-   
 )

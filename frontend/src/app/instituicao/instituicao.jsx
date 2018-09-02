@@ -11,13 +11,19 @@ export default class Instituicao extends Component {
     
     constructor(props){
         super(props)
-        this.state = {nome: '', usuario: '', supervisor: '', list: [] }
+        this.state = {nome: '', usuario: '', usuarioNome: '', list: [] }
+        
+        var a = localStorage.getItem("email")
+        console.log(a)
+        console.log( localStorage.getItem("email") )
         
 
         this.handleChangeNome = this.handleChangeNome.bind(this)
         this.handleChangeUsuario = this.handleChangeUsuario.bind(this)
+        this.handleChangeUsuarioNome = this.handleChangeUsuarioNome.bind(this)
         this.handleChangeSupervisor = this.handleChangeSupervisor.bind(this)
        
+        this.handleAdd = this.handleAdd.bind(this)
         this.handleAdd = this.handleAdd.bind(this)
 
         this.refresh()
@@ -34,18 +40,30 @@ export default class Instituicao extends Component {
     handleChangeSupervisor(e){
         this.setState({...this.state, supervisor: e.target.value })
     }
+    handleChangeUsuarioNome(value){
+        this.setState({...this.state, usuarioNome: value })
+    }
    
     handleAdd(){
-        const nome = this.state.nome//arrumar forma de passar mais parametros, no caso nome e tipo. Tipo é fixo entao é mais de boa. Quando deixei default na collection deu
-        const usuario = this.state.usuario
-        const supervisor = this.state.supervisor
-        axios.post(URL, {
+        var nome = this.state.nome
+        axios.get(`http://localhost:4009/api/user?email=${localStorage.getItem("email")}`)
+        .then(function (response) {
+            //handle success
+            nome = response.data[0].nome
+            this.setState({...this.state, usuarioNome: nome})
+        })
+        .catch(function (error) {
+            // handle error
+            console.log(error);
+        })
+        /*axios.post(URL, {
             nome, 
             usuario, 
             supervisor
         })
-        .then(resp => this.refresh())
+        .then(resp => this.refresh())*/
     }
+
     refresh(){
         axios.get(`${URL}?sort=-createdAt`)
             .then(resp => this.setState({...this.state, nome: '', usuario: '', supervisor: '', list: resp.data})) 

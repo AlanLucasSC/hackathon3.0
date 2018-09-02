@@ -10,6 +10,8 @@ import LoginTela from '../login/login'
 import CadastrarInstituicao from'../instituicao/instituicao'
 import ListarDocumento from'../documentos/documentos'
 import ListarEstagio from '../listarestagio/listarestagio'
+import ListarEstagioUsuario from '../tabelasUser/listarestagio'
+import ListarDocumentos from '../listaDocumento/listarestagio'
 
 export default class Routes extends React.Component{
     constructor(props){
@@ -20,8 +22,6 @@ export default class Routes extends React.Component{
         return (
             <BrowserRouter>
                 <Switch>
-                    
-                  
                     <Route path="/" exact={true} component={LoginTela} />
                     <Route path="/processo" component={Processo} />
                     <Route path="/protocolo" component={Protocolo} />
@@ -31,9 +31,8 @@ export default class Routes extends React.Component{
                     <Route path="/cadastrarinstituicao" component={CadastrarInstituicao} />
                     <Route path="/listardocumento" component={ListarDocumento} />
                     <Route path="/listaestagio" component={ListarEstagio} />
-                    
-                    
-
+                    <Route path="/listaestagiouser" component={ListarEstagioUsuario} />
+                    <Route path="/listardocumentos" component={ListarDocumentos} />
                 </Switch>
             </BrowserRouter>   
         )

@@ -33,10 +33,7 @@ export default class Tabela extends Component {
     render() {
         return (
             <div className='tabela'> 
-                <Form list={this.state.list} 
-                 
-                    
-                    />
+                <Form list={this.state.list} handleAdd={this.props.handleAdd}/>
              
            
             </div>

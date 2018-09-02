@@ -5,7 +5,7 @@ import Form from './form'
 import Layout from '../layout/layout'
 import BreadCrumbs from '../dashboard/breadcrumbs';
 
-const URL = 'http://localhost:4009/api/estagio'
+const URL = 'http://localhost:4009/api/documento'
 //talvez trocar estagio por user
 
 

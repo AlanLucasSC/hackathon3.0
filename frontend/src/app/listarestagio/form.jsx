@@ -5,13 +5,19 @@ import { Router, Route, Link, hashHistory } from 'react-router'
 export default props => {
     const renderRows = () =>{
         const list = props.list || []
-        return list.map(post => (   
-            <tr key={post._id}>
-            <th>{post.nome}</th>
-            <th>{post.usuarioNome}</th>
-            
-             </tr>
-        ))
+        return list.map(post => {
+          if(post.validado == 'FALSE'){
+            return (
+              <tr key={post._id}>
+                <th>{post.instituicao}</th>
+                <th>{post.supervisor}</th>
+                <th>
+                <button className="sucess" onClick={() => props.aceitar( post._id )}> Aceitar </button>
+                </th>
+              </tr>
+            )
+          }
+        })
     }
    
 

@@ -3,16 +3,17 @@ import axios from 'axios'
 const URL = "http://virtus.azi.com.br/virtus-rest/v1/arquivos"
 const URL_File = 'http://localhost:4009/file'
 
-export const CriarDocumento = (event) => {
+export const CriarDocumento = (event, processo, protocolo, categoria, 
+    estagiario, instituicao, _id) => {
     var bodyFormData = new FormData();
         bodyFormData.set('image', event.target.files[0]);
-        bodyFormData.append('protocolodoc', '288424012018');
-        bodyFormData.append('chavecategoria', '[DU_BOM]TERMO_COMPROMISSO');
-        bodyFormData.append('numeroprocesso', '0400158016201801');
+        bodyFormData.append('protocolodoc', protocolo);
+        bodyFormData.append('chavecategoria', categoria);
+        bodyFormData.append('numeroprocesso', processo);
         bodyFormData.append('mimetype', 'application/pdf');
         bodyFormData.append('nome', 'Termo de Compromisso');
-        bodyFormData.append('estagio', 'NUMERO');
-        bodyFormData.append('user', 'NUMERO');
+        bodyFormData.append('estagio', _id);
+        bodyFormData.append('user', estagiario);
 
         console.log(event.target)
         console.log(event.target.files[0])
@@ -35,5 +36,12 @@ export const CriarDocumento = (event) => {
 }
 
 export const DownloadDocumento = (doc) => {
-    
+    console.log(doc)
+    axios.get(`http://localhost:4009/download/${doc}`).then(
+        value => {
+            console.log(value)
+            setTimeout(function(){ window.location = `http://localhost:4009/public/${value.data.path}` }, 2000);
+            
+        }
+    )
 }
