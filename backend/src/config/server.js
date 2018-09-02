@@ -91,7 +91,7 @@ server.post('/file', upload.single('image'), function (req, res, next) {
 server.get('/download/:arquivo', function (req, res, next) {
   var arquivo = req.params.arquivo;
 
-  const url = 'http://virtus.azi.com.br/virtus-rest/v1/arquivos?chave=cb1f5a1d-87e0-4c44-88f9-dde868a9a912'
+  const url = 'http://virtus.azi.com.br/virtus-rest/v1/arquivos?chave='+arquivo
   const newName = Date.now()+'.pdf'
   const path = Path.resolve('C:/Users/andre/Documents/Hachathon/hackathon3.0/backend', 'public', newName)
 
