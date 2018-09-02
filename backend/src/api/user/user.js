@@ -9,6 +9,8 @@ const user = new mongoose.Schema({
     nome: { type: String, required: true },
     cargo: { type: String },
     rg: { type: String },
+    cpf: { type: String },
+    token: { type: String }
 })
 
 user.pre('save', function(next) {
