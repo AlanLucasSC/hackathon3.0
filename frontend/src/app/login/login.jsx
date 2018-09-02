@@ -14,10 +14,10 @@ export default class Login extends Component {
     render() {
         return (
             <div className="limiter">
-                <div className="container-login100">
-                    <div className="wrap-login100">
+                <div className="container-cadastro">
+                    <div className="wrap-cadastro">
                         <div className="login100-pic ">
-                             <img src={Ibagem} />
+                             <img src={Ibagem} class="fix5"/>
                         </div>
         
                         <form id="form_login" encType="multipart/form-data" className="login100-form validate-form">

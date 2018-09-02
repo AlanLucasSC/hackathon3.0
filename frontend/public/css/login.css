@@ -174,6 +174,7 @@ iframe {
 #form_login{
   padding-right: 80px;
   padding-top: 40px;
+  padding-bottom: 30px;
  
 }
 
@@ -238,7 +239,6 @@ iframe {
   color: #333333;
   line-height: 1.2;
   text-align: center;
-
   width: 100%;
   display: block;
   padding-top: 15px;
@@ -495,15 +495,24 @@ iframe {
 }
 
 .fix1{
-  padding-top: 140px;
+  padding-top: 80px
 }
 
 .fix2{
   margin-left: 9px;
 }
 
+p{
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
 .fix3{
   padding-bottom: 60px;
   padding-top:1px;
   padding-right: 90px;
+}
+
+.fix5{
+  padding-top: 38px
 }

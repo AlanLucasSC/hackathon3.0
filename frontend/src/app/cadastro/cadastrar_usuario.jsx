@@ -11,9 +11,8 @@ export default props => (
             </div>
 
             <form id="form_login" encType="multipart/form-data" className=" login100-form validate-form">
-                <span className="login100-form-title">
-                    Cadastro<hr/>
-                    <p className="text-muted">Todos os campos são obrigatórios!</p>
+                <span className="">
+                    <p className="text-muted">Todos os campos são obrigatórios!</p> 
                 </span>
 
                 <div className="wrap-input100" >
