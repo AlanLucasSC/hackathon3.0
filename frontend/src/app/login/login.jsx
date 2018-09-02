@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Ibagem from '../../../src/img/logo.jpg'
+import { Link } from 'react-router-dom'
+
 
 export default class Login extends Component {
     constructor(props){
@@ -18,7 +20,7 @@ export default class Login extends Component {
                              <img src={Ibagem} />
                         </div>
         
-                        <form id="form_login" enctype="multipart/form-data" className="login100-form validate-form">
+                        <form id="form_login" encType="multipart/form-data" className="login100-form validate-form">
                             <span className="login100-form-title">
                                 Login
                             </span>
@@ -40,20 +42,24 @@ export default class Login extends Component {
                             </div>
                             
                             <div className="container-login100-form-btn">
-                                <button className="login100-form-btn"type="submit" className="btn btn-primary btn-md">
+                                <Link to={'/dashboard'}>
+                                <button className="login100-form-btn"type="submit" className="btn btn-primary btn-md" >
                                     Login
                                 </button>
+                                </Link>
                             </div>
         
                             <div className="text-center p-t-136">
-                                <a className="txt2" href="#">
+                                <a className="txt2" href="/cadastrarusuario">
                                     Cadastre-se
                                     <i className="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                                 </a>
                             </div>
+                           
                         </form>
                     </div>
                 </div>
+               
             </div>
         )
     }
