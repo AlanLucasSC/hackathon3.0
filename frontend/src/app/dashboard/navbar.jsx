@@ -2,7 +2,7 @@ import React from 'react'
 
 export default props => (
     
-    <ul className="navbar-nav ml-auto ml-md-0">
+    <ul className="navbar-nav ml-auto">
         <li className="nav-item dropdown no-arrow">
           <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i className="fas fa-user-circle fa-fw"></i>

@@ -132,7 +132,7 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
 
 .sidebar {
   width: 90px !important;
-  background-color: #212529;
+  background-color: #212529/*#212529*/;
   min-height: calc(100vh - 56px);
 }
 
@@ -252,6 +252,15 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
   -webkit-transform: rotate(15deg);
   transform: rotate(15deg);
 }
+
+.card-body{
+  height: 200px;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 80px;
+  padding-left: 40px;
+}
+
 
 @media (min-width: 576px) {
   .card-columns {

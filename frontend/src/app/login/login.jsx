@@ -11,40 +11,50 @@ export default class Login extends Component {
 
     render() {
         return (
-        <div className='login'>
-            <div className="container"> 
-            <div className="row">
-                <div className="col-md-6 offset-md-3">
-                    <div className="card border cardlog" id="cadastroUsuario">
-                     <img class="card-img-top" src={Ibagem} />  
-                        <div className="card-body ">
-                        <h3 class="lock">
-                            <i class="fas fa-lock">
-                            </i>
-                        </h3>    
-                        <strong><h3 class="card-title">Login</h3></strong>
-                        
-                                <form id="form_login" encType="multipart/form-data">
-                                    
-                                    <div className="form-group">
-                                        <strong><label For="email">Email</label></strong>
-                                            <input className="form-control" id="email" placeholder="Digite seu email" />
-                                    </div>
-
-                                    <div className="form-group">
-                                    <strong><label For="password">Senha</label></strong>
-                                        <input className="form-control" id="password" placeholder="Digite sua senha" />
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary btn-md">Cadastrar</button>
-                                </form>
+            <div className="limiter">
+                <div className="container-login100">
+                    <div className="wrap-login100">
+                        <div className="login100-pic ">
+                             <img src={Ibagem} />
                         </div>
+        
+                        <form id="form_login" enctype="multipart/form-data" className="login100-form validate-form">
+                            <span className="login100-form-title">
+                                Login
+                            </span>
+        
+                            <div className="wrap-input100 validate-input" data-validate = "Digite um email válido: ex@abc.xyz">
+                                <input className="input100" type="text" name="email" id="email" placeholder="Email" />
+                               
+                                <span className="symbol-input100">
+                                    <i className="fa fa-envelope" aria-hidden="true"></i>
+                                </span>
+                            </div>
+        
+                            <div className="wrap-input100 validate-input" data-validate = "Digite uma senha">
+                                <input className="input100" type="password" name="password" id="password" placeholder="Senha" />
+                               
+                                <span className="symbol-input100">
+                                    <i className="fa fa-lock" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            
+                            <div className="container-login100-form-btn">
+                                <button className="login100-form-btn"type="submit" className="btn btn-primary btn-md">
+                                    Login
+                                </button>
+                            </div>
+        
+                            <div className="text-center p-t-136">
+                                <a className="txt2" href="#">
+                                    Cadastre-se
+                                    <i className="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </div>  
-        </div>  
-              
-        </div>       
+            </div>
         )
     }
 }
@@ -53,3 +63,5 @@ value={props.email} onChange={props.handleChangeEmail}/> */
 
 /*<input className="form-control" id="password" placeholder="Senha" 
 value={props.password} onChange={props.handleChangePassword}*/
+//button: onClick={props.handleAdd}
+//embaxo do input  <span className="focus-input100"></span>

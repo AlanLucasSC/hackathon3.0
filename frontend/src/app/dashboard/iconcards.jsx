@@ -3,11 +3,11 @@ import React from 'react'
 export default props => (
     
     <div className="row">
-            <div className="col-xl-4 col-sm-6 mb-3">
+            <div className="col-xl-6 col-sm-6 mb-3">
               <div className="card text-white bg-primary o-hidden h-100">
                 <div className="card-body">
                   <div className="card-body-icon">
-                    <i className="fas fa-fw fa-comments"></i>
+                    <i className="fas fa-plus"></i>
                   </div>
                   <div className="mr-5">Criar Estágios</div>
                 </div>
@@ -19,7 +19,7 @@ export default props => (
                 </a>
               </div>
             </div>
-            <div className="col-xl-4 col-sm-6 mb-3">
+            <div className="col-xl-6 col-sm-6 mb-3">
               <div className="card text-white bg-warning o-hidden h-100">
                 <div className="card-body">
                   <div className="card-body-icon">

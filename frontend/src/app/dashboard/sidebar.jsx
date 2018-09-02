@@ -4,19 +4,19 @@ export default props => (
 
     <ul className="sidebar navbar-nav">
         <li className="nav-item active">
-          <a className="nav-link" href="index.html">
+          <a className="nav-link" href="/dashboard">
             <i className="fas fa-fw fa-tachometer-alt"></i>
             <span> Painel</span>
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="charts.html">
-            <i className="fas fa-fw fa-chart-area"></i>
+          <a className="nav-link" href="/cadastrarestagio">
+            <i className="fas fa-plus"></i>
             <span> Adicionar Novo Estágio</span></a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="tables.html">
-            <i className="fas fa-fw fa-table"></i>
+          <a className="nav-link" href="/listarestagio">
+            <i className="fas fa-list-ul"></i>
             <span> Estágios</span></a>
         </li>
       </ul>
