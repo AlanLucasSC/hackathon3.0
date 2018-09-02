@@ -20,8 +20,8 @@ export default class Routes extends React.Component{
             <BrowserRouter>
                 <Switch>
                     
-                    <Route path="/" exact={true} component={Login} />
-                    <Route path="/login" component={LoginTela} />
+                  
+                    <Route path="/" exact={true} component={LoginTela} />
                     <Route path="/processo" component={Processo} />
                     <Route path="/protocolo" component={Protocolo} />
                     <Route path="/dashboard" component={Dashboard} />
@@ -38,3 +38,4 @@ export default class Routes extends React.Component{
 
 //<Route path="/" exact={true} component={Login} />
 //<Route path="/" component={LoginTela} />
+//<Route path="/" exact={true} component={Login} />
