@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
 import '../../App.css';
-import { getCategoria, CriarDocumento } from '../../action/effects'
+import { getCategoria, CriarDocumento, DownloadDocumento } from '../../action/effects'
 
 export class Login extends Component{
     constructor(props){
@@ -27,6 +27,7 @@ export class Login extends Component{
                     name="Foto"
                     onChange={ CriarDocumento }
                 />
+                <button onClick={ () => DownloadDocumento('cb1f5a1d-87e0-4c44-88f9-dde868a9a912') }>Aperte Aqui</button>
             </div>
         )
     }

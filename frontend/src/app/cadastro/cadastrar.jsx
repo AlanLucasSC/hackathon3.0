@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import {  Link } from 'react-router'
 import Form from './cadastrar_usuario'
+
 const URL = 'http://localhost:4009/api/user'
-const URL = 'http://localhost:4009/api/estagio/estagio'
+
 //talvez trocar estagio por user
 
 
