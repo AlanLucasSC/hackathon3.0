@@ -14,6 +14,7 @@ const Axios = require('axios')
 const multer  = require('multer')
 
 const Documento = require('../api/documento/documento')
+const Users = require('../api/user/user')
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -89,9 +90,6 @@ server.post('/file', upload.single('image'), function (req, res, next) {
 
 server.get('/download/:arquivo', function (req, res, next) {
   var arquivo = req.params.arquivo;
-  console.log(arquivo)
-  console.log('C:/Users/andre/Documents/Hachathon/hackathon3.0/backend')
-  console.log('C:\Users\andre\Documents\Hachathon\hackathon3.0\backend')
 
   const url = 'http://virtus.azi.com.br/virtus-rest/v1/arquivos?chave=cb1f5a1d-87e0-4c44-88f9-dde868a9a912'
   const newName = Date.now()+'.pdf'
@@ -114,6 +112,56 @@ server.get('/download/:arquivo', function (req, res, next) {
     path: newName
   })
 })
+
+server.post('/signatario', function (req, res, next) {
+  const URL = 'http://virtus.azi.com.br/virtus-rest/v1/signatarios'
+  Axios.post(URL, {
+    nome: req.body.nome,
+    cargo: req.body.cargo,
+    cpf: req.body.cpf,
+    rg: req.body.rg,
+    email: req.body.email
+  })
+  .then(function (response) {
+    res.json({
+      code: 'SUCCESS',
+      message: 'Sucesso ao criar signatario, Acesse seu Email e Insira Aqui o Codigo'
+    })
+  })
+  .catch(function (error) {
+    res.json({
+      code: 'ERROR',
+      message: 'Erro ao criar signatario'
+    })
+  });
+})
+
+server.post('/signatario/token', function (req, res, next) {
+  const URL = 'http://virtus.azi.com.br/virtus-rest/v1/assinaturas'
+  Axios.post(URL, {
+    cpf: req.body.cpf,
+    token: req.body.token
+  })
+  .then(function (response) {
+    Users.findOneAndUpdate({cpf: req.body.cpf}, {token: req.body.token})
+    .then(function(){
+      console.log('Ok');
+    })
+    res.json({
+      code: 'SUCCESS',
+      message: 'Confirmado com sucesso',
+      response: response.data
+    })
+  })
+  .catch(function (error) {
+    const mensagem = error.response.data.mensagem
+    res.json({
+      code: 'ERROR',
+      message: mensagem,
+    })
+  })
+})
+
 
 //Deixar acessar a pasta public
 server.use('/public', express.static('public/'))
