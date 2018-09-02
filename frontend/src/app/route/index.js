@@ -7,7 +7,7 @@ import Dashboard from '../dashboard/dashboard'
 import CadastrarUsuario from '../cadastro/cadastrar'
 import CadastrarEstagio from '../estagio/estagio'
 import LoginTela from '../login/login'
-import CadastrarInstituicao from'../instituicao/instituicao'
+import CadastrarInstituicao from'../instituicao/instituicaotela'
 
 
 export default class Routes extends React.Component{
