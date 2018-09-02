@@ -9,6 +9,7 @@ import CadastrarEstagio from '../estagio/estagio'
 import LoginTela from '../login/login'
 import CadastrarInstituicao from'../instituicao/instituicao'
 import ListarDocumento from'../documentos/documentos'
+import ListarEstagio from '../listarestagio/listarestagio'
 
 export default class Routes extends React.Component{
     constructor(props){
@@ -29,6 +30,7 @@ export default class Routes extends React.Component{
                     <Route path="/cadastrarestagio" component={CadastrarEstagio} />
                     <Route path="/cadastrarinstituicao" component={CadastrarInstituicao} />
                     <Route path="/listardocumento" component={ListarDocumento} />
+                    <Route path="/listaestagio" component={ListarEstagio} />
                     
                     
 

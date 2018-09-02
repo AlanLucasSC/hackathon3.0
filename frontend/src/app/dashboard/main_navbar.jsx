@@ -6,7 +6,7 @@ import NavBar from '../dashboard/navbar'
 export default props => (
     <nav className="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a className="navbar-brand mr-1" href="/dashboard">Du Fino</a>
+      <a className="navbar-brand mr-1" href="/dashboard">Estágio Fácil</a>
 
       <NavBar />
 
