@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Layout from '../layout/layout'
 import {  Link } from 'react-router'
 import Form from './instituicaotela'
 const URL = 'http://localhost:4009/api/instituicao'
@@ -38,15 +39,12 @@ export default class Instituicao extends Component {
         const nome = this.state.nome//arrumar forma de passar mais parametros, no caso nome e tipo. Tipo é fixo entao é mais de boa. Quando deixei default na collection deu
         const usuario = this.state.usuario
         const supervisor = this.state.supervisor
-       
-       
-        
-
-        axios.post(URL, {nome, usuario,  
-        supervisor})
-            .then(resp => this.refresh())
-       
-            
+        axios.post(URL, {
+            nome, 
+            usuario, 
+            supervisor
+        })
+        .then(resp => this.refresh())
     }
     refresh(){
         axios.get(`${URL}?sort=-createdAt`)
@@ -58,18 +56,18 @@ export default class Instituicao extends Component {
 
     render() {
         return (
-            <div className='Instituicao'> 
-                <Form nome={this.state.nome} 
-                    usuario={this.state.usuario}
-                    supervisor={this.state.supervisor}
-                    handleAdd={this.handleAdd}
-                    handleChangeNome={this.handleChangeNome}
-                    handleChangeUsuario={this.handleChangeUsuario}
-                    handleChangeSupervisor={this.handleChangeSupervisor}
+            <Layout>
+                <div className='Instituicao'> 
+                    <Form nome={this.state.nome} 
+                        usuario={this.state.usuario}
+                        supervisor={this.state.supervisor}
+                        handleAdd={this.handleAdd}
+                        handleChangeNome={this.handleChangeNome}
+                        handleChangeUsuario={this.handleChangeUsuario}
+                        handleChangeSupervisor={this.handleChangeSupervisor}
                     />
-             
-           
-            </div>
+                </div>
+            </Layout>
         )
     }
 }

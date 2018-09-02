@@ -1,42 +1,32 @@
 import React from 'react'
-import Layout from '../layout/layout'
 import DataTables from '../dashboard/datatables';
+
+const Card = {
+    height: 'auto'
+}
 
 export default props => (
    
    <div>
-        <Layout>
-            <div className="container"> 
-                <div className="row">
-                    <div className="col-md-6 offset-md-3">
-                        <div className="card border" id="cadastroInstituicao">
-                            <div className="card-body">
-                                <h3 className="card-title">Cadastre Instituiçao</h3>
-                                <h6 className="card-subtitle mb2 text-muted">(*) Campos Obrigatórios</h6>
-                                    <form encType="multipart/form-data">
-                                        <div className="form-group">
-                                            <strong><label htmlFor="nome">Nome</label></strong>
-                                            <input className="form-control" id="nome" placeholder="Nome" 
-                                            value={props.nome} onChange={props.handleChangeNome}/>
-                                        </div>
-                                        <div className="form-group">
-                                        <strong><label htmlFor="usuario">Usuario</label></strong>
-                                            <input className="form-control" id="usuario" placeholder="Usuário" 
-                                            value={props.usuario} onChange={props.handleChangeUsuario}/>
-                                        </div>
-                                        <div className="form-group">
-                                        <strong><label htmlFor="supervisor">Supervisor</label></strong>
-                                            <input className="form-control" id="supervisor" placeholder="supervisor" 
-                                            value={props.supervisor} onChange={props.handleChangeSupervisor}/>
-                                        </div>
-                                        <button type="submit" className="btn btn-primary btn-md" onClick={props.handleAdd}>Cadastrar</button>
-                                    </form>
-                            </div>
+        <div className="container"> 
+            <div className="row">
+                <div className="col-md-6 offset-md-3">
+                    <div className="card border" id="cadastroInstituicao">
+                        <div className="card-body" style={ Card }>
+                            <h3 className="card-title">Cadastre Instituiçao</h3>
+                            <h6 className="card-subtitle mb2 text-muted">(*) Campos Obrigatórios</h6>
+                                <div encType="multipart/form-data">
+                                    <div className="form-group">
+                                        <strong><label htmlFor="nome">Nome</label></strong>
+                                        <input className="form-control" id="nome" placeholder="Nome" 
+                                        value={props.nome} onChange={props.handleChangeNome}/>
+                                    </div>
+                                    <button type="submit" className="btn btn-primary btn-md" onClick={props.handleAdd}>Cadastrar</button>
+                                </div>
                         </div>
                     </div>
-                </div>  
-            </div>
-        </Layout> 
-     
+                </div>
+            </div>  
+        </div>     
    </div>
 )
