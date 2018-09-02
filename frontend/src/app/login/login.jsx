@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import Ibagem from '../../../src/img/logo.jpg'
+import Ibagem from '../../../src/img/logo.png'
 import { Link } from 'react-router-dom'
 
 const URL = 'http://localhost:4009/api/user'

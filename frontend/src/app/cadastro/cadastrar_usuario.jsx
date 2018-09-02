@@ -1,5 +1,5 @@
 import React from 'react'
-import Ibagem from '../../../src/img/logo.jpg'
+import Ibagem from '../../../src/img/logo.png'
 import { Link } from 'react-router-dom'
 
 export default props => (
@@ -13,7 +13,6 @@ export default props => (
 
             <div className=" login100-form validate-form">
                 <span className="login100-form-title">
-                    Cadastro<hr/>
                     <p className="text-muted">Todos os campos são obrigatórios!</p>
                 </span>
 
