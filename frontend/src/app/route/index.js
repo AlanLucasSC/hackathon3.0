@@ -8,6 +8,7 @@ import CadastrarUsuario from '../cadastro/cadastrar'
 import CadastrarEstagio from '../estagio/estagio'
 import LoginTela from '../login/login'
 import CadastrarInstituicao from'../instituicao/instituicao'
+import ListarDocumento from'../documentos/documentos'
 
 
 export default class Routes extends React.Component{
@@ -28,6 +29,8 @@ export default class Routes extends React.Component{
                     <Route path="/cadastrarusuario" component={CadastrarUsuario} />
                     <Route path="/cadastrarestagio" component={CadastrarEstagio} />
                     <Route path="/cadastrarinstituicao" component={CadastrarInstituicao} />
+                    <Route path="/listardocumento" component={ListarDocumento} />
+                    
                     
 
                 </Switch>
