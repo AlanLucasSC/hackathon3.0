@@ -29,6 +29,7 @@ export default props => {
               <tr>
                 <th>Instituição</th>
                 <th>Supervisor</th>
+                <th>Ações</th>
                
               </tr>
             </thead>
@@ -36,6 +37,7 @@ export default props => {
               <tr>
               <th>Instituição</th>
                 <th>Supervisor</th>
+                <th>Ações</th>
                
               </tr>
             </tfoot>

@@ -13,8 +13,8 @@ export default props => (
                 <div className="col-md-6 offset-md-3">
                     <div className="card border" id="cadastroInstituicao">
                         <div className="card-body" style={ Card }>
-                            <h3 className="card-title">Cadastre Instituiçao</h3>
-                            <h6 className="card-subtitle mb2 text-muted">(*) Campos Obrigatórios</h6>
+                            <h3 className="card-title">Cadastrar Instituição</h3>
+                            
                                 <div encType="multipart/form-data">
                                     <div className="form-group">
                                         <strong><label htmlFor="nome">Nome</label></strong>
