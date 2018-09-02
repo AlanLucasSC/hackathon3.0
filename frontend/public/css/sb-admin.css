@@ -380,5 +380,11 @@ body.sidebar-toggled footer.sticky-footer {
 
 label{
   padding-top: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
+  padding-right: 450px;
+}
+
+.cardlog{
+  margin-top: 200px;
+  margin-bottom: 150px;
 }

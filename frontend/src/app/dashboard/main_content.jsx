@@ -13,7 +13,7 @@ export default props => (
             <div className="container-fluid">
                 <BreadCrumbs />
                 <IconCards />
-                <DataTables />
+                
             </div>
             <Footer />
         </div>
