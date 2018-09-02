@@ -17,7 +17,6 @@ export default class Dashboard extends Component {
             <Layout>
                 <BreadCrumbs />
                 <IconCards />
-                <DataTables/>
             </Layout>
 
         )

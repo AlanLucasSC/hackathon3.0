@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import {  Link } from 'react-router'
-import Form from './form'
+import Form from './instituicaotela'
 const URL = 'http://localhost:4009/api/instituicao'
 //talvez trocar estagio por user
 

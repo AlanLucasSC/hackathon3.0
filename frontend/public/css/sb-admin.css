@@ -248,19 +248,31 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
   top: -1.25rem;
   right: -1rem;
   opacity: 0.4;
-  font-size: 5rem;
+  font-size: 30px;
   -webkit-transform: rotate(15deg);
   transform: rotate(15deg);
 }
 
 .card-body{
   height: 200px;
+  text-align: center;
+  padding-top: 30px;
+  padding-left: 40px;
+}
+
+.card-body-table{
+  height: auto;
   font-size: 15px;
   text-align: center;
   padding-top: 0px;
   padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 15px;
 }
 
+#fix4{
+  margin-top: 50px;
+}
 
 @media (min-width: 576px) {
   .card-columns {
