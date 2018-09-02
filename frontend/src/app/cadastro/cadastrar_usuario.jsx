@@ -1,5 +1,6 @@
 import React from 'react'
 import Ibagem from '../../../src/img/logo.jpg'
+import { Link } from 'react-router-dom'
 
 export default props => (
    
@@ -10,9 +11,10 @@ export default props => (
                  <img className="fix1" src={Ibagem} />
             </div>
 
-            <form id="form_login" encType="multipart/form-data" className=" login100-form validate-form">
-                <span className="">
-                    <p className="text-muted">Todos os campos são obrigatórios!</p> 
+            <div className=" login100-form validate-form">
+                <span className="login100-form-title">
+                    Cadastro<hr/>
+                    <p className="text-muted">Todos os campos são obrigatórios!</p>
                 </span>
 
                 <div className="wrap-input100" >
@@ -51,12 +53,13 @@ export default props => (
                         Cadastrar
                     </button>
        
-
-                <button type="cancel" className="btn btn-dark btn-md fix2" onClick={props.handleAdd}>
+                <Link to="/">
+                <button type="cancel" className="btn btn-dark btn-md fix2" >
                         Cancelar
                     </button>
+                    </Link>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
