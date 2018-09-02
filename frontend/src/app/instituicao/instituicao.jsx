@@ -62,23 +62,10 @@ export default class Instituicao extends Component {
                 <Form nome={this.state.nome} 
                     usuario={this.state.usuario}
                     supervisor={this.state.supervisor}
-                  
-
                     handleAdd={this.handleAdd}
-
-                
-
-
-                    
-
-                   
                     handleChangeNome={this.handleChangeNome}
                     handleChangeUsuario={this.handleChangeUsuario}
                     handleChangeSupervisor={this.handleChangeSupervisor}
-
-
-                    
-                   
                     />
              
            
