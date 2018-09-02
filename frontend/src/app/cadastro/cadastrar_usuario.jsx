@@ -10,7 +10,7 @@ export default props => (
                  <img className="fix1" src={Ibagem} />
             </div>
 
-            <form id="form_login" encType="multipart/form-data" className=" login100-form validate-form">
+            <div className=" login100-form validate-form">
                 <span className="login100-form-title">
                     Cadastro<hr/>
                     <p className="text-muted">Todos os campos são obrigatórios!</p>
@@ -53,11 +53,11 @@ export default props => (
                     </button>
        
 
-                <button type="cancel" className="btn btn-dark btn-md fix2" onClick={props.handleAdd}>
+                <button type="cancel" className="btn btn-dark btn-md fix2">
                         Cancelar
                     </button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>

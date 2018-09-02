@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import {  Link } from 'react-router'
+import { Link } from 'react-router'
 import Form from './cadastrar_usuario'
 
 const URL = 'http://localhost:4009/api/user'
@@ -14,7 +14,7 @@ export default class Cadastrar extends Component {
     constructor(props){
         super(props)
         this.state = {email: '', password: '', nome: '', 
-        cargo: '', rg: '', cpf: '', list: [] }
+        cargo: '', rg: '', cpf: '', list: [], err: '' }
         
 
         this.handleChangeEmail = this.handleChangeEmail.bind(this)
@@ -24,10 +24,8 @@ export default class Cadastrar extends Component {
         this.handleChangeRg = this.handleChangeRg.bind(this)
         this.handleChangeCpf = this.handleChangeCpf.bind(this)
         this.handleAdd = this.handleAdd.bind(this)
-        
 
         this.refresh()
-       
     }
 
   
@@ -60,7 +58,13 @@ export default class Cadastrar extends Component {
         
 
         axios.post(URL, {email, password, nome, cargo, rg, cpf})
-            .then(resp => this.refresh())
+            .then(resp => {
+                localStorage.setItem("email", this.state.email);
+                window.location = "/dashboard"
+            })
+            .catch(function (error) {
+                console.log(error)
+            });
        
             
     }
@@ -68,7 +72,6 @@ export default class Cadastrar extends Component {
         axios.get(`${URL}?sort=-createdAt`)
             .then(resp => this.setState({...this.state, email: '', password: '', nome: '', 
             cargo: '', rg: '', cpf:'', list: resp.data})) 
-       
     }
    
    
