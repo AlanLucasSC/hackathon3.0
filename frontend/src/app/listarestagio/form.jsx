@@ -21,7 +21,7 @@ export default props => {
         <div id="fix4" className="card mb-3">
      <div className="card-header">
               <i className="fas fa-table"> </i>
-               Adicionar Estágios</div>
+               Lista de Estágios</div>
       <div className="card-body-table" >
         <div className="inferno">
           <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">

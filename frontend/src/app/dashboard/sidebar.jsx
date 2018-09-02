@@ -15,7 +15,7 @@ export default props => (
             <span> Adicionar Novo Estágio</span></a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/listarestagio">
+          <a className="nav-link" href="/listaestagio">
             <i className="fas fa-list-ul"></i>
             <span> Estágios</span></a>
         </li>

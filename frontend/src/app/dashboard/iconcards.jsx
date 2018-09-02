@@ -9,10 +9,10 @@ export default props => (
                   <div className="card-body-icon">
                     <i className="fas fa-plus"></i>
                   </div>
-                  <div className="mr-5">Criar Estágios</div>
+                  <div className="mr-5"><h5>Criar Estágios</h5></div>
                 </div>
-                <a className="card-footer text-white clearfix small z-1" href="#">
-                  <span className="float-left">Exibir</span>
+                <a className="card-footer text-white clearfix small z-1" href="/cadastrarestagio">
+                  <span className="float-left"><h5>Exibir</h5></span>
                   <span className="float-right">
                     <i className="fas fa-angle-right"></i>
                   </span>
@@ -25,10 +25,10 @@ export default props => (
                   <div className="card-body-icon">
                     <i className="fas fa-fw fa-list"></i>
                   </div>
-                  <div className="mr-5">Estágios</div>
+                  <div className="mr-5"><h5>Estágios</h5></div>
                 </div>
-                <a className="card-footer text-white clearfix small z-1" href="#">
-                  <span className="float-left">Exibir</span>
+                <a className="card-footer text-white clearfix small z-1" href="/cadastrarinstituicao">
+                  <span className="float-left"><h5>Exibir</h5></span>
                   <span className="float-right">
                     <i className="fas fa-angle-right"></i>
                   </span>
