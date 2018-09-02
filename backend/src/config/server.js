@@ -6,7 +6,9 @@ const express = require('express')
 const server = express()
 const allowCors = require('./cors')
 const fs = require('fs')
-const request = require("request");
+const request = require("request")
+const Path = require('path')
+const Axios = require('axios')
 
 //Upload file
 const multer  = require('multer')
@@ -83,6 +85,34 @@ server.post('/file', upload.single('image'), function (req, res, next) {
     image: req.file.path
   })
 
+})
+
+server.get('/download/:arquivo', function (req, res, next) {
+  var arquivo = req.params.arquivo;
+  console.log(arquivo)
+  console.log('C:/Users/andre/Documents/Hachathon/hackathon3.0/backend')
+  console.log('C:\Users\andre\Documents\Hachathon\hackathon3.0\backend')
+
+  const url = 'http://virtus.azi.com.br/virtus-rest/v1/arquivos?chave=cb1f5a1d-87e0-4c44-88f9-dde868a9a912'
+  const newName = Date.now()+'.pdf'
+  const path = Path.resolve('C:/Users/andre/Documents/Hachathon/hackathon3.0/backend', 'public', newName)
+
+  const response = Axios({
+      method: 'GET',
+      url: url,
+      responseType: 'stream'
+  }).then(
+      function(response) {
+          response.data.pipe(fs.createWriteStream(path))
+      }
+  )
+
+  /**
+   * Responder o cliente
+   */
+	res.json({
+    path: newName
+  })
 })
 
 //Deixar acessar a pasta public
